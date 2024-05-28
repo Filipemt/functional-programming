@@ -27,7 +27,13 @@ public class Product {
     }
 
     public static boolean staticProductPredicate(Product p) {
+        // metodos estáticos trabalham com o Produto passado como argumento
         return p.getPrice() >= 100;
+    }
+
+    public boolean nonStaticProductPredicate() {
+        // metodos nao estáticos trabalham com o objeto de onde eu estou, por isso não tem parâmetros
+        return getPrice() >= 100;
     }
 
     @Override
