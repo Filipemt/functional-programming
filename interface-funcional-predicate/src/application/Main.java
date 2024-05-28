@@ -18,7 +18,7 @@ public class Main {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.90));
 
-        list.removeIf(new ProductPredicate());
+        list.removeIf(Product::staticProductPredicate);
 
         list.forEach(System.out::println);
     }
