@@ -21,9 +21,9 @@ public class Main {
 
         double min = 100.0;
 
-        Predicate<Product> predicate = product -> product.getPrice() >= min;
+        // Predicate<Product> predicate = product -> product.getPrice() >= min;
 
-        list.removeIf(predicate);
+        list.removeIf(product -> product.getPrice() >= min);
 
         list.forEach(System.out::println);
     }
