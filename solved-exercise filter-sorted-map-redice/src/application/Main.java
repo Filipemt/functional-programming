@@ -38,6 +38,12 @@ public class Main {
                 line = bufferedReader.readLine();
             }
 
+            double avarage = list.stream()
+                    .map(p -> p.getPrice())
+                    .reduce(0.0, (x,y) -> x+y) / list.size();
+
+            System.out.println("Avarage price: " + String.format("%.2f", avarage));
+
         } catch (IOException e ) {
             System.out.println("Error: " + e.getMessage());
         }
